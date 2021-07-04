@@ -1,4 +1,3 @@
-import numpy as np
 from densenet3d import build_densenet
 nb_class = 1 
 model = build_densenet((121, 145, 121, 1), 0,nb_class)
