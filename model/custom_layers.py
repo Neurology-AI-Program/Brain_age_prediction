@@ -6,8 +6,16 @@ author: Gao Huang, Zhuang Liu, Kilian Q. Weinberger, Laurens van der Maaten
         arXiv:1608.06993
         (See https://github.com/flyyufelix/DenseNet-Keras/blob/master/densenet161.py)
 """
+"""
+from tensorflow.python.keras.layers import Layer, InputSpec
+try:
+    from tensorflow.keras import initializations
+except ImportError:
+    from tensorflow.keras import initializers as initializations
+import tensorflow.keras.backend as K
+"""
 
-from keras.engine import Layer, InputSpec
+from keras.layers import Layer, InputSpec
 try:
     from keras import initializations
 except ImportError:
@@ -58,7 +66,7 @@ class Scale(Layer):
         self.beta = K.variable(self.beta_init(shape), name='{}_beta'.format(self.name))
         #self.gamma = self.gamma_init(shape, name='{}_gamma'.format(self.name))
         #self.beta = self.beta_init(shape, name='{}_beta'.format(self.name))
-        self.trainable_weights = [self.gamma, self.beta]
+        self._trainable_weights = [self.gamma, self.beta]
 
         if self.initial_weights is not None:
             self.set_weights(self.initial_weights)
