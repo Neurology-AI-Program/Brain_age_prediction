@@ -6,6 +6,9 @@ author: Gao Huang, Zhuang Liu, Kilian Q. Weinberger, Laurens van der Maaten
         Densely Connected Convolutional Networks
         arXiv:1608.06993
         (See https://github.com/flyyufelix/DenseNet-Keras/blob/master/densenet161.py)
+author: Hoseok Choi, Seokbeen Lim, Kyeongran Min, Kyoung-ha Ahn, Kyoung-Min Lee and Dong Pyo Jang
+        Non–human primate epidural ECoG analysis using explainable deep learning technology
+        (https://iopscience.iop.org/article/10.1088/1741-2552/ac3314/meta)
 """
 
 
